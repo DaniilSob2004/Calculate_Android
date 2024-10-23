@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".MainActivity"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_display"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/display_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:background="@color/bg_display"
+        android:textColor="@color/white"
+        android:text="0"
+        android:textSize="65sp"
+        android:textStyle="bold"
+        android:gravity="end|bottom"
+        android:paddingRight="18dp"
+        android:paddingBottom="5dp" />
+
+    <GridLayout
+        android:id="@+id/buttons_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:rowCount="5"
+        android:columnCount="4"
+        android:textColor="@color/white">
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/top_bg_btn"
+            android:text="←" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/top_bg_btn"
+            android:text="+/-" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/top_bg_btn"
+            android:text="x²" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/right_bg_btn"
+            android:text="/" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="7" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="8" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="9" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/right_bg_btn"
+            android:text="x" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="4" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="5" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="6" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/right_bg_btn"
+            android:text="-" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="1" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="2" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="3" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/right_bg_btn"
+            android:text="+" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="C" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="0" />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/center_bg_btn"
+            android:text="." />
+
+        <Button
+            style="@style/calculatorButton"
+            android:backgroundTint="@color/right_bg_btn"
+            android:text="=" />
+
+    </GridLayout>
+
+</LinearLayout>
