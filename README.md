@@ -1,1 +1,3 @@
-# Calculate_Android
+  - ![1](https://github.com/user-attachments/assets/3ea61fea-5a13-4d25-994b-aed0b39822f4)
+  - ![2](https://github.com/user-attachments/assets/74a0f3b2-545c-4147-a88f-121e4d5f69f3)
+  - ![3](https://github.com/user-attachments/assets/7f0424a5-75ae-4320-908c-5622b906d518)
