@@ -13,7 +13,6 @@ public class TestUtils {
         return (canConvertToInteger(num)) ? (int)num + "" : num + "";
     }
 
-
     public static float convertStrToFloat(final String strNum) {
         float number;
         try {
@@ -28,7 +27,6 @@ public class TestUtils {
         return num % 1 == 0;
     }
 
-
     public static boolean isOperation(final String str, String[] operations) {
         for (String oper : operations) {
             if (Objects.equals(oper, str)) {
@@ -36,6 +34,11 @@ public class TestUtils {
             }
         }
         return false;
+    }
+
+    public static float roundNumber(final float num, final int signs) {
+        float scale = (float) Math.pow(10, signs);
+        return Math.round(num * scale) / scale;
     }
 
 

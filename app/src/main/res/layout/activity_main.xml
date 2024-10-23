@@ -18,10 +18,23 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <TextView
+        android:id="@+id/display_history_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.75"
+        android:background="@color/bg_display"
+        android:textColor="@color/top_bg_btn"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="end|bottom"
+        android:paddingRight="18dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
         android:id="@+id/display_text_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="1.25"
         android:background="@color/bg_display"
         android:textColor="@color/white"
         android:text="0"

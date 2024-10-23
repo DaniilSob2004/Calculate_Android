@@ -20,8 +20,10 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView displayTextView;
+    private TextView displayTextView;  // textview для цифр
+    private TextView displayHistoryTextView;
     private String displayText;  // цифры на дисплее
+    private String displayHistoryText;  // цифры на дисплее
     private String operation;  // последняя операция
     private float result;  // текущий результат
     private boolean isLastOperation;  // последнее действие это какая то операция
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         displayTextView = findViewById(R.id.display_text_view);
+        displayHistoryTextView = findViewById(R.id.display_history_text_view);
         clearCalculate();
 
         setListenerForButtons();
@@ -69,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 isLastOperation = false;
                 operation = "";
+
+                displayHistoryText += " " + TestUtils.getStrForDisplayByNumber(currNum) + " =";
             }
 
             // унарная операция
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 operation = btnText;
                 isLastOperation = true;
+                displayHistoryText = TestUtils.getStrForDisplayByNumber(result) + " " + operation;
             }
 
             // точка/цифра
@@ -111,10 +117,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         displayText = (Objects.equals(displayText, "0")) ? btnText : displayText + btnText;
                     }
                 }
-
                 isLastOperation = false;
             }
 
+            displayHistoryTextView.setText(displayHistoryText);
             displayTextView.setText(displayText);
         }
     }
@@ -148,6 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 Toast.makeText(this, "No such operation exists...", Toast.LENGTH_SHORT).show();
         }
+        result = TestUtils.roundNumber(result, 3);
         displayText = TestUtils.getStrForDisplayByNumber(result);
     }
 
@@ -175,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void clearCalculate() {
         result = 0;
         displayText = "0";
+        displayHistoryText = "";
         isLastOperation = false;
         operation = "";
     }
